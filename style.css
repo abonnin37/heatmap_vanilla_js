@@ -1,0 +1,111 @@
+/* Global table style */
+
+table, td, th {
+    border-collapse: collapse;
+}
+
+colgroup, tbody {
+    border: 3px solid rgb(191, 191, 191);
+}
+
+tr {
+    height: 30px; /* hauteur colonne */
+}
+
+td {
+    width: 45px; /* largeur ligne */
+}
+
+p {
+    margin:0;
+}
+
+.heatmap_cell {
+    background-clip: content-box;
+    padding: 4px;
+    background-color: lightgray;
+}
+
+/* Style text header vertical */
+.verticalTableHeader {
+    position: relative;
+    height: 150px; /* hauteur header vertical */
+}
+
+.verticalTableHeader p{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: calc(150px - 20px) 0 0 50%; /* hauteur header vertical - 20px*/
+    transform-origin: 0% 50%;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+.verticalTableHeader p:before{
+    content:'';
+    width:0;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+/* thead style */
+thead tr:nth-child(1) th {
+    font-size: 18px;
+    color: rgb(32, 54, 128);
+}
+
+thead tr:nth-child(2) th {
+    background-clip: content-box;
+    padding: 3px;
+    background-color: rgb(217, 217, 217);
+}
+
+/* tbody group style */
+tbody th {
+    color: rgb(113, 113, 113);
+    text-align: left;
+}
+
+tbody th p {
+    padding-left: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+tbody th.level2 p {
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#group1 th p{
+    color: rgb(157, 153, 239);
+}
+
+#group2 th p {
+    color: rgb(240, 191, 66);
+}
+
+#group3 th p {
+    color: rgb(112, 174, 136);
+}
+/* Color background green */
+.highlight_row_col {
+    background-color: rgb(226, 239, 218);
+}
+
+.highlight_row_col th p{
+    background-color: rgb(191, 191, 191);
+    transform: translateX(-4px);
+}
